@@ -1,5 +1,35 @@
 # -*- coding:utf-8 -*-
+
 import time
+
+# Finding the repeated number in array.
+
+def count_range(array, length, start, end):
+    count = 0
+    for i in range(length):
+        if array[i] >= start and array[i] <= end:
+            count += 1
+    return count
+
+def search_method4(array):
+    """Don\'t modify the array, finding the repeated number.
+    """
+    m = len(array)
+    start = 1
+    end = m - 1
+    while start <= end:
+        mid = (end - start) // 2 + start
+        count = count_range(array, m, start, mid)
+        if start == end:
+            if count > 1:
+                return start
+            else:
+                break
+        if count > (mid - start + 1):
+            end = mid
+        else:
+            start = mid + 1
+    return -1
 
 def search_method3(array):
     m = len(array)
@@ -100,16 +130,23 @@ def main():
 
     # ret, number = search_method2(dataarray) # method 2
 
-    ret, number = search_method3(dataarray) # method 3
+    # ret, number = search_method3(dataarray) # method 3
 
-    if ret:
-        print('There are %d repeated numbers.' % len(number))
-        print('The number is:', number)
+    # if ret:
+    #     print('There are %d repeated numbers.' % len(number))
+    #     print('The number is:', number)
+    # else:
+    #     print(number)
+    # t2 = time.time()
+    # print('consume time: %f' % (t2 - t1))
+
+
+    # method 4
+    ret = search_method4(dataarray) # method 4
+    if ret == -1:
+        print('There exist not repeated number in array!')
     else:
-        print(number)
-    t2 = time.time()
-    print('consume time: %f' % (t2 - t1))
-
+        print('The repeated number is %d' % ret)
 
 if __name__ == '__main__':
     main()
