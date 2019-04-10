@@ -1,10 +1,11 @@
 # -*- coding:utf-8 -*-
 
 import random
-from doubletree import Tree
+from doubletree import Tree, BinaryTreeNode
+
 
 def get_next_node(p_node):
-    if p_node is None:
+    if p_node.data_ is None:
         warningstr = 'The node is empty.'
         return warningstr
 
@@ -76,7 +77,7 @@ def main():
     node_list = get_node_list(Rtree, L1)
 
     node = node_list[random.randint(0, length - 1)]
-    print('The given node is:' + str(node.data_))
+    print('The value of the given node is:' + str(node.data_))
 
     node_next = get_next_node(node)
     print('The value of the next node is: ' + str(node_next.data_))
