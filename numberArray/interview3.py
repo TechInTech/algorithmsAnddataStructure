@@ -4,12 +4,14 @@ import time
 
 # Finding the repeated number in array.
 
+
 def count_range(array, length, start, end):
     count = 0
     for i in range(length):
         if array[i] >= start and array[i] <= end:
             count += 1
     return count
+
 
 def search_method4(array):
     """Don\'t modify the array, finding the repeated number.
@@ -31,6 +33,7 @@ def search_method4(array):
             start = mid + 1
     return -1
 
+
 def search_method3(array):
     m = len(array)
     rep_number = []
@@ -47,6 +50,7 @@ def search_method3(array):
         return False, warningstr
     else:
         return True, rep_number
+
 
 def search_method1(array):
     m = len(array)
@@ -69,6 +73,7 @@ def search_method1(array):
         rep_number = [int(key) for key in rep_number.keys()]
         return True, rep_number
 
+
 def search_method2(array):
     rep_number = []
     m = len(array)
@@ -86,7 +91,8 @@ def search_method2(array):
                     array[i] = array[temp]
                     array[temp] = temp
             else:
-                warningstr = 'There are number beyond the range from 0 to ' + str(m -1) + ', please input again!'
+                warningstr = 'There are number beyond the range from 0 to ' + \
+                    str(m - 1) + ', please input again!'
                 return False, warningstr
     if len(rep_number) == 0:
         warningstr = 'The array is not repeated'
@@ -94,19 +100,23 @@ def search_method2(array):
     else:
         return True, rep_number
 
+
 def judge_fun(array):
     array.sort()
     m = len(array)
     warningstr = None
     if array[-1] >= m:
-        warningstr = 'There are number beyond the range from 0 to ' + str(m -1) + ', please input again!'
+        warningstr = 'There are number beyond the range from 0 to ' + \
+            str(m - 1) + ', please input again!'
         return True, warningstr
     else:
         return False, warningstr
 
+
 def main():
     while True:
-        L1 = input('Input the testing array(number splitted with \',\' as: 1,2,3,4):')
+        L1 = input(
+            'Input the testing array(number splitted with \',\' as: 1,2,3,4):')
         if L1 == '':
             print('The array is empty, please input again!')
         else:
@@ -140,13 +150,13 @@ def main():
     # t2 = time.time()
     # print('consume time: %f' % (t2 - t1))
 
-
     # method 4
-    ret = search_method4(dataarray) # method 4
+    ret = search_method4(dataarray)  # method 4
     if ret == -1:
         print('There exist not repeated number in array!')
     else:
         print('The repeated number is %d' % ret)
+
 
 if __name__ == '__main__':
     main()

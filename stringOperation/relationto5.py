@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 
+
 def sort_array(array1, array2):
     array1.sort()
     array2.sort()
@@ -19,9 +20,11 @@ def sort_array(array1, array2):
                 j -= 1
     return array1
 
+
 def get_array(num):
     while True:
-        L1 = input('Input the array ' + num + '(number splitted with \',\' as: 1,2,3,4):')
+        L1 = input('Input the array ' + num +
+                   '(number splitted with \',\' as: 1,2,3,4):')
         if L1 == '':
             print('The input is empty, please input again!')
         else:
@@ -29,6 +32,7 @@ def get_array(num):
             print('The array ' + num + ' is:', array)
             break
     return array
+
 
 def main():
     a1 = get_array('A1')

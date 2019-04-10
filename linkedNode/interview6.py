@@ -1,9 +1,11 @@
 # -*- utf:-8 -*-
 
+
 class Node(object):
     def __init__(self, value=None, next=None):
         self.data = value
         self.next = next
+
 
 class Stack(object):
     def __init__(self):
@@ -18,6 +20,7 @@ class Stack(object):
         item = self.item[self.size - 1]
         self.size -= 1
         return item
+
 
 class LinkedNode(object):
     def __init__(self):
@@ -67,9 +70,11 @@ class LinkedNode(object):
     #         else:
     #             print(head.data)
 
+
 def main():
     ln = LinkedNode()
     strings = 'abcdefghijklmnopqrstuvwxyz'
+    strings = ' '
     for i in strings:
         ln.add(Node(i))
     print(ln)
