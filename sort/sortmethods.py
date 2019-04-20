@@ -130,8 +130,23 @@ def merge(lst, copybuffer, low, middle, high):
         lst[i] = copybuffer[i]
 
 
-def sort_distr(lst):
-    pass
+def sort_radix(lst, d):
+    rlists = [[] for i in range(10)]
+    llen = len(lst)
+    for m in range(-1, -d - 1, -1):
+        for j in range(llen):
+            rlists[lst[j][m]].append(lst[j])
+        j = 0
+        for i in range(10):
+            tem = rlists[i]
+            for k in range(len(tem)):
+                lst[j] = tem[k]
+                j += 1
+            rlists[i].clear()
+        print(str(m), lst)
+        print('\n', '\n')
+
+
 
 def sort_external(lst):
     pass
@@ -173,14 +188,20 @@ def main():
     # sort_quick(lst)
     # print('After sort:', lst)
 
-    # method 5
-    size = 100000
-    lst = [random.randint(1, size) for i in range(size)]
-    print('Before sort:', lst)
+    # # method 5
+    # size = 100000
+    # lst = [random.randint(1, size) for i in range(size)]
+    # print('Before sort:', lst)
+    #
+    # sort_merge(lst)
+    # print('After sort:', lst)
 
-    sort_merge(lst)
-    print('After sort:', lst)
-
+    sequence = [(1,3,2),(3,1,3),(2,2,0),(0,1,1),(2,0,2),(3,0,1),(0,3,2),(1,0,3),(0,2,0),\
+    (2,1,1),(3,1,0),(3,0,1),(1,1,0),(0,1,3),(2,3,1),(0,2,2),(0,3,0),(3,3,1),(2,1,3),(3,1,1)]
+    print(sequence)
+    d = len(sequence[0])
+    sort_radix(sequence, d)
+    print(sequence)
 
 if __name__ == '__main__':
     main()

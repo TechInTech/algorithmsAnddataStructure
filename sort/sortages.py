@@ -18,4 +18,4 @@ def sortages(ageslist):
     for i in range(maxage + 1):
         for j in range(timesofage[i]):
             ageslist[index] = i
-            index += 1    
+            index += 1
