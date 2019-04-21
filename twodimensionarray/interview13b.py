@@ -26,7 +26,7 @@ def movingcountcore(threshold, rows, cols, row, col, visited):
 
 def check(threshold, rows, cols, row, col, visited):
     if row >= 0 and row < rows and col >= 0 and col < cols and (getdigits(row)
-                                                                + getdigits(col) < threshold) and (not visited[row, col]):
+        + getdigits(col) <= threshold) and (not visited[row, col]):
         return True
 
     return False

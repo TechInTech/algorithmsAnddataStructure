@@ -23,7 +23,7 @@ def movingincheck(check_matrix, rows, cols, row, col, threshold):
 
 
 def check(check_matrix, rows, cols, row, col, threshold):
-    if row >= 0 and row < rows and col >= 0 and col < cols and (count_num(row, col) < threshold) and\
+    if row >= 0 and row < rows and col >= 0 and col < cols and (count_num(row, col) <= threshold) and\
             (not check_matrix[row, col]):
         return True
 
