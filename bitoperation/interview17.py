@@ -36,7 +36,7 @@ def printnumber(number):
     nlength = len(number)
 
     if nlength == 1:
-        print('%d'% number[0])
+        print('%d' % number[0])
     else:
         for i in range(nlength):
             if isbeginning0 and (i != nlength - 1):
@@ -44,7 +44,7 @@ def printnumber(number):
 
             if not isbeginning0:
                 # pass
-                print('%d'% number[i])
+                print('%d' % number[i])
     print('\t')
 
 
@@ -75,6 +75,7 @@ def main():
     print_1_to_max_of_n_digits(n)
 
     # print_1_to_max_of_n_digits2(n)
+
 
 if __name__ == '__main__':
     main()

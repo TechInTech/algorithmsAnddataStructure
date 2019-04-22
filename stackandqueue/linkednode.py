@@ -14,9 +14,9 @@ class LinkedNode(object):
 
     def isEmpty(self):
         if self.size == 0:
-            return False
-        else:
             return True
+        else:
+            return False
 
     def __len__(self):
         return self.size
@@ -40,3 +40,12 @@ class LinkedNode(object):
             front = front.next
         result += str(front.data) + ','
         return result
+
+    def listofnode(self):
+        nodelist = list()
+        front = self.head
+        while front.next is not None:
+            nodelist.append(front)
+            front = front.next
+        nodelist.append(front)
+        return nodelist

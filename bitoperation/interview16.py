@@ -1,6 +1,7 @@
 
 G_INVALIDINPUT = False
 
+
 def power(base, exponent):
     G_INVALIDINPUT = False
 
@@ -46,7 +47,8 @@ def main():
     exponent = int(input('Input the exponent:'))
 
     result = power(base, exponent)
-    print('The power of %.1f in exponent of %d is %.2f' % (base, exponent, result))
+    print('The power of %.1f in exponent of %d is %.2f' %
+          (base, exponent, result))
 
 
 if __name__ == '__main__':
