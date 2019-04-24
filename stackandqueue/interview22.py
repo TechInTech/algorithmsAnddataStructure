@@ -1,6 +1,7 @@
 import numpy as np
 from linkednode import LinkedNode, Node
 
+
 class Solution_22(object):
 
     def __init__(self):
@@ -32,7 +33,7 @@ class Solution_22(object):
 
 def main():
     linknode = LinkedNode()
-    value_list = np.random.randint(1,7,6).tolist()
+    value_list = np.random.randint(1, 7, 6).tolist()
 
     for i in value_list:
         node = Node(i)
@@ -40,7 +41,7 @@ def main():
 
     print('The LinkedNode is: ' + linknode.__str__())
 
-    k = value_list[np.random.randint(1,6)]
+    k = value_list[np.random.randint(1, 6)]
     print('The number to be deleted is: ' + str(k))
 
     outputnode = Solution_22()
