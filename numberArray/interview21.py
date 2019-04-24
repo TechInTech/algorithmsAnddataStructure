@@ -1,6 +1,7 @@
 
 import numpy as np
 
+
 class Adjust_the_location_of_odd_and_even(object):
     def __init__(self):
         self.front = 0
@@ -22,7 +23,7 @@ class Adjust_the_location_of_odd_and_even(object):
         self.rear = n - 1
 
     def adjust_loaction(self):
-        array =self.create_array()
+        array = self.create_array()
         n = len(array)
         self.init_para(n)
 

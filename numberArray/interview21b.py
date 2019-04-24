@@ -27,6 +27,7 @@ class Solution_21(object):
     def iseven(self, n):
         return (n & 1) == 0
 
+
 def main():
     array = list()
     temp = input('Input the elements of array:')

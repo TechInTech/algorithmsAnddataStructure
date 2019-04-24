@@ -1,5 +1,4 @@
 
-# import copy
 class Solution(object):
     def __init__(self):
         self.cursor = 0
@@ -10,7 +9,7 @@ class Solution(object):
 
         numeric = self.scaninteger(string)
 
-        if self.cursor < len(string) and string[self.cursor]  == '.':
+        if self.cursor < len(string) and string[self.cursor] == '.':
             self.cursor += 1
 
             numeric = self.scanunsignedinteger(string) or numeric
@@ -22,7 +21,6 @@ class Solution(object):
 
         return numeric and self.cursor == len(string)
 
-
     def scanunsignedinteger(self, string):
         before = self.cursor
 
@@ -30,7 +28,6 @@ class Solution(object):
             self.cursor += 1
 
         return self.cursor > before
-
 
     def scaninteger(self, string):
         if string[self.cursor] == '+' or string[self.cursor] == '-':
