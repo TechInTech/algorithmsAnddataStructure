@@ -19,6 +19,7 @@ def matchcore(string, pattern):
              matchcore(string, pattern[2::])
         else:
             return matchcore(string, pattern[2::])
+
     if string[0] == pattern[0] or (pattern[0] == '.' and string != ''):
         return matchcore(string[1::], pattern[1::])
 
