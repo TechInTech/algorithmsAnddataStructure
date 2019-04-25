@@ -31,8 +31,8 @@ class Solution_26(object):
         return self.tree1_has_tree2(tree1.left_, tree2.left_) and self.tree1_has_tree2(tree1.right_, tree2.right_)
 
     def isequal(self, num1, num2):
-        # if (num1 - num2 > -0.0000001) and (num1 - num2 < 0.0000001):
-        if (num1 == num2):
+        if (num1 - num2 > -0.0000001) and (num1 - num2 < 0.0000001):
+        # if (num1 == num2):
             return True
         else:
             return False

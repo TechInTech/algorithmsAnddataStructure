@@ -49,7 +49,7 @@ class Tree(object):
         return root
 
     def travel_tree(self, tree):
-        print(tree.data_, end=', ')    # preorder travel
+        print(tree.data_)    # preorder travel
         if tree.left_ is not None:
             self.travel_tree(tree.left_)
         # print(tree.data_)    # inorder travel
@@ -57,3 +57,16 @@ class Tree(object):
             self.travel_tree(tree.right_)
         # print(tree.data_)    # postorder travel
         return
+
+    def structure_of_tree(self, tree):
+
+        def recurse(node, level):
+            s = ''
+            if node is not None:
+                s += recurse(node.right_, level + 1)
+                s += '| ' * level
+                s += str(node.data_) + '\n'
+                s += recurse(node.left_, level + 1)
+            return s
+
+        return recurse(tree, 0)
