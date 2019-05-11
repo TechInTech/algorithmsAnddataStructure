@@ -75,4 +75,4 @@ class Solution_30b(object):
     def min(self):
         if self.main_stack.isEmpty():
             raise KeyError('The stack is empty.')
-        return self.min_stack.peek()
+        return self.top()
