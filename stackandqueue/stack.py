@@ -26,6 +26,13 @@ class Stack(object):
         self.items = Node(item, self.items)
         self.size += 1
 
+    def delete(self):
+        if self.isEmpty():
+            raise KeyError('The stack is empty.')
+        value = self.items.data
+        self.items = self.items.next
+        self.size -= 1
+        
     def pop(self):
         if self.isEmpty():
             raise KeyError('The stack is empty.')
