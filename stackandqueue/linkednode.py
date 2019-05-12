@@ -21,7 +21,8 @@ class LinkedNode(object):
     def __len__(self):
         return self.size
 
-    def add(self, node):
+    def add(self, value):
+        node = Node(value)
         if self.isEmpty():
             self.head = node
             self.size += 1
@@ -49,3 +50,21 @@ class LinkedNode(object):
             front = front.next
         nodelist.append(front)
         return nodelist
+
+def main():
+    ls = ['A', 'B', 'C', 'D', 'E']
+    complnodes = LinkedNode()
+    for item in ls:
+        complnodes.add(item)
+
+    head = complnodes.head
+    count = 0
+    while head.next is not None:
+        count += 1
+        print(head.data)
+        head = head.next
+    print(count)
+    print(complnodes.__str__())
+
+if __name__ == '__main__':
+    main()
