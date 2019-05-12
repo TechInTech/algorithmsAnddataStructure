@@ -48,12 +48,25 @@ class ComplexLinkedNode(object):
         fromnode.sibling_ = tonode
         # return self.head
 
+    def example(self):
+        ls = ['A', 'B', 'C', 'D', 'E']
+        for item in ls:
+            self.add(value=item)
+        node_ls = self.listofnode()
+        index_ls = [(0, 2), (1, 4), (3, 1)]
+        for i_tup in index_ls:
+            self.connet_node(node_ls[i_tup[0]], node_ls[i_tup[1]])
+        return self.head
+
 
 def main():
     ls = ['A', 'B', 'C', 'D', 'E']
     complnodes = ComplexLinkedNode()
     for item in ls:
         complnodes.add(value=item)
+
+    print(complnodes.__str__())
+
     node_ls = complnodes.listofnode()
     index_ls = [(0, 2), (1, 4), (3, 1)]
     for i_tup in index_ls:
@@ -61,11 +74,6 @@ def main():
     nodes_ls = complnodes.listofnode()
     for node in nodes_ls:
         print(node.data_, '-->', node.sibling_.data_ if node.sibling_ else None)
-
-
-    print(complnodes.__str__())
-
-
 
 if __name__ == '__main__':
     main()
