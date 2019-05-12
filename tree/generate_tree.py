@@ -2,6 +2,7 @@
 from tree import Tree
 
 class Generate_tree(object):
+
     def __init__(self):
         print('Please input the preorder traverse of tree:')
         self.preo_ls = self.get_sequence()
@@ -9,7 +10,7 @@ class Generate_tree(object):
 
         print('Please input the inorder traverse of tree:')
         self.ino_ls = self.get_sequence()
-        print('The preorder is:', self.ino_ls)
+        print('The inorder is:', self.ino_ls)
 
         self.length = len(self.preo_ls)
 
@@ -28,7 +29,7 @@ class Generate_tree(object):
         return self.tree.get_tree()
 
     def travel(self):
-        self.tree.travel_tree(self.tree.root)
+        self.tree.travel_tree(self.create_tree())
 
     def print_structure(self):
-        self.tree.structure_of_tree(self.tree.root)
+        self.tree.structure_of_tree(self.create_tree())

@@ -69,4 +69,5 @@ class Tree(object):
                 s += recurse(node.left_, level + 1)
             return s
 
-        return recurse(tree, 0)
+        print('Tree structure:')
+        print(recurse(tree, 0))
