@@ -4,13 +4,15 @@ from tree import Tree
 class Generate_tree(object):
 
     def __init__(self):
-        print('Please input the preorder traverse of tree:')
-        self.preo_ls = self.get_sequence()
-        print('The preorder is:', self.preo_ls)
+        # print('Please input the preorder traverse of tree:')
+        # self.preo_ls = self.get_sequence()
+        self.preo_ls = [10, 6, 4, 8, 14, 12,  16]
+        # print('The preorder is:', self.preo_ls)
 
-        print('Please input the inorder traverse of tree:')
-        self.ino_ls = self.get_sequence()
-        print('The inorder is:', self.ino_ls)
+        # print('Please input the inorder traverse of tree:')
+        # self.ino_ls = self.get_sequence()
+        self.ino_ls = [4, 6, 8, 10, 12, 14, 16]
+        # print('The inorder is:', self.ino_ls)
 
         self.length = len(self.preo_ls)
 
