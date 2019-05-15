@@ -6,12 +6,14 @@ class Generate_tree(object):
     def __init__(self):
         # print('Please input the preorder traverse of tree:')
         # self.preo_ls = self.get_sequence()
-        self.preo_ls = [10, 6, 4, 8, 14, 12,  16]
+        # self.preo_ls = [10, 6, 4, 8, 14, 12,  16] # 二叉树
+        self.preo_ls = [1, 2, 4, 5, 7, 3, 6, 8]
         # print('The preorder is:', self.preo_ls)
 
         # print('Please input the inorder traverse of tree:')
         # self.ino_ls = self.get_sequence()
-        self.ino_ls = [4, 6, 8, 10, 12, 14, 16]
+        # self.ino_ls = [4, 6, 8, 10, 12, 14, 16] # 二叉树
+        self.ino_ls = [4, 2, 7, 5, 1, 3, 6, 8]
         # print('The inorder is:', self.ino_ls)
 
         self.length = len(self.preo_ls)
