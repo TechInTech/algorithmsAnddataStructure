@@ -42,7 +42,8 @@ from linkednode import LinkedNode
 
 def main():
     ls1 = [1, 2, 3, 4, 5, 6, 7, 8]
-    ls2 = [0, 5, 6, 7, 8]
+    # ls2 = [0, 5, 6, 7, 8]
+    ls2 = [9, 10, 11, 12]
 
     # 创建链表
     link1 = LinkedNode()
@@ -56,7 +57,10 @@ def main():
     # print(link2.listofnode())
 
     commom_node = Solution_52().find_first_common_node(link1.head, link2.head)
-    print('Two list node\'s commom node are %d.'%commom_node.data)
+    if commom_node:
+        print('Two list node\'s commom node are %d.'%commom_node.data)
+    else:
+        print('Two list node have not commom node.')
 
     # commom_node = Solution_52().get_length(link2.head)
     # print('Two LinkedNode\'s commom node are %d'%commom_node)
