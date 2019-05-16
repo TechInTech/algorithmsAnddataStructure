@@ -38,10 +38,16 @@ class Queue(object):
         self.size_ += 1
 
     def pop_back(self):
+        if self.isEmpty():
+            raise KeyError('The queue is empty.')
+
         self.size_ -= 1
         return self.queue_.pop()
 
     def pop_front(self):
+        if self.isEmpty():
+            raise KeyError('The queue is empty.')
+
         self.size_ -= 1
         return self.queue_.pop(0)
 
@@ -56,3 +62,21 @@ class Queue(object):
         else:
             self.queue_.insert(index, item)
         self.size_ += 1
+
+
+def main():
+    nums = [2, 3, 4, 2, 6, 2, 5, 1]
+
+    queue = Queue()
+    for i in nums:
+        queue.push_back(i)
+    queue.insert(0, '0')
+    queue.insert(queue.size_, 'final')
+    queue.insert(-queue.size_, '--')
+
+    for i in range(queue.size_):
+        print(queue.queue_[i], end=', ')
+
+
+if __name__ == '__main__':
+    main()
