@@ -2,7 +2,7 @@
 """二叉树的深度
 """
 
-class SOlution_55(object):
+class Solution_55(object):
     def tree_depth(self, tree_root):
         if not tree_root:
             return 0
@@ -19,7 +19,7 @@ def main():
     tree_root = tree.create_tree()
     tree.print_structure()
 
-    depth = SOlution_55().tree_depth(tree_root)
+    depth = Solution_55().tree_depth(tree_root)
     print('The depth of tree is %d.'%depth)
 
 
