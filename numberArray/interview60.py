@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-"""n个骰子的点数
+"""n个骰子的点数(基于递归求骰子点数)
 """
 G_MAXVALUE = 6
 
@@ -38,7 +38,7 @@ class Solution_60(object):
 
 
 def main():
-    n = 2
+    n = 6
 
     s60 = Solution_60()
     s60.print_probability(n)
