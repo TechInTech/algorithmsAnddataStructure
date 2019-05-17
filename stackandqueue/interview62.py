@@ -28,21 +28,18 @@ class Solution_62(object):
             if self.next == len(numbers):
                 self.next = 0
 
-            # if self.current == len(numbers):
-            #     self.current -= 1
-            #     del numbers[self.current]
             if self.current == len(numbers) - 1:
-                # self.next = 0
+                # current 在最后一个元素，删除current所在元素后，current为列表首位，
+                # next为current下一位
                 del numbers[self.current]
                 self.current = 0
                 self.next = self.current + 1
             elif self.current == len(numbers) - 2:
+                # current为列表倒数第二位，删除current后，current为列表最后一位，next为表首
                 del numbers[self.current]
                 self.next = 0
-            # elif self.current == 0:
-            #     del numbers[self.current]
-                # self.next -= 1
             else:
+                # current在列表中时，删除current后，current所在位置不变，next减1
                 del numbers[self.current]
                 self.next -= 1
 
