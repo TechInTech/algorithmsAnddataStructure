@@ -40,7 +40,7 @@ class Solution_60b(object):
 
 
 def main():
-    n = 6
+    n = 2
 
     s60 = Solution_60b()
     s60.print_probability(n)
